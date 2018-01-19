@@ -1,0 +1,11 @@
+# Indicate we're using CircleCI v2.0
+version: 2
+# A list of all jobs
+jobs:
+  build: # The job name
+    docker: # The Docker configuration
+      - image: circleci/python:3.6.3 # The primary container
+    steps:  # The steps this build is made up of
+      - checkout
+      - run: echo "Just a hello world from the shell"
+      
